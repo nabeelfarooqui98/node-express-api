@@ -8,17 +8,18 @@ const users = [
     {
         firstName: "John",
         lastName: "Doe",
-        age: 25
+        age: 25,
+        id: "1"
     },
     {
         firstName: "Jane",
         lastName: "Doe",
-        age: 24
+        age: 24,
+        id: "2"
     }
 ];
 
 router.get('/', (req, res) => {
-    console.log(users);
     res.send(users);
 });
 
@@ -31,5 +32,11 @@ router.post('/', (req, res) => {
     res.send(`User with name ${userWithId.firstName} added`);
 });
 
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+
+    const foundUser = users.find((user) => user.id === id);
+    res.send(foundUser);
+});
 
 export default router;

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/nabeelfarooqui98/node-express-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
   }
 }

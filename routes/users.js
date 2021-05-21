@@ -5,20 +5,7 @@ import { createUser, deleteUser, getUser, getUserById, updateUser } from '../con
 
 const router = express.Router();
 
-let users = [
-    {
-        firstName: "John",
-        lastName: "Doe",
-        age: 25,
-        id: "1"
-    },
-    {
-        firstName: "Jane",
-        lastName: "Doe",
-        age: 24,
-        id: "2"
-    }
-];
+
 
 router.get('/', getUser);
 
